@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram フォローチェッカー</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="pageTitle">Instagram フォローチェッカー 使い方</h1>
+
+    <div id="usage">
+        <h3>・データをダウンロードする</h3>
+        <p>1.<a href="https://www.instagram.com/">Instagram</a>を開く</p>
+        <p>2."その他"から"アクティビティ"を選択</p>
+        <img class="usage-image" src="./UsageImg/img1.png" alt="使い方の画像">
+        <p>3."個人データをダウンロード"から"次へ"をクリック</p>
+        <img class="usage-image" src="./UsageImg/img2.png" alt="使い方の画像">
+        <p>4.新しいタブが開かれるのでそこで"情報をダウンロードまたは転送"をクリック</p>
+        <img class="usage-image" src="./UsageImg/img3.png" alt="使い方の画像">
+        <p>5.どの程度の情報が必要か問われるので"情報の一部"を選択</p>
+        <img class="usage-image" src="./UsageImg/img4.png" alt="使い方の画像">
+        <p>6."つながり"から"フォロワーとフォロー"のみを選択して次へ</p>
+        <img class="usage-image" src="./UsageImg/img5.png" alt="使い方の画像">
+        <p>7.情報をどのように利用するか問われるので好きな方を選択して次へ（デバイスにダウンロードがおすすめ）</p>
+        <p>8."期間"を全期間にして、"通知"は自身のメールアドレスを選択、"フォーマット"はJSONを選びファイルを作成</p>
+        <img class="usage-image" src="./UsageImg/img6.png" alt="使い方の画像">
+        <p>9.処理中になるので完了するまで待つ（1~10分程度）</p>
+        <p>10.処理が終了するとメールが届くので" download your information"をクリック</p>
+        <img class="usage-image" src="./UsageImg/img7.png" alt="使い方の画像">
+        <p>11.新しいタブが開かれるのでそこで"現在のアクティビティ"から"利用可能なダウンロード"の"ダウンロード"をクリック</p>
+        <h3>・データを読み込む</h3>
+        <p>1.ダウンロードが完了したら解凍する</p>
+        <p>2.<a href="./home.html">ホームページ</a>を開く</p>
+        <p>3.following.jsonファイルを選択をクリックして、先ほど解凍したファイルを開き[instagram-yourID-YYYY-MM-DD/connections/followers_and_following]中にあるfollowing.jsonを選択する</p>
+        <p>4.followers_1.jsonファイルを選択をクリックして、同様にfollowers_1.jsonを選択する</p>
+        <p>5.実行をクリック</p>
+        <p>Done.</p>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+<footer class="footer">
+    <p class="copyright">Copyright © 2024 SAYU. All Rights Reserved.</p>
+    <ul class="md-flex">
+      <li><a href="./home.html">ホーム</a></li>
+      <li><a href="https://discord.gg/QMe4BZEc">コンタクト</a></li>
+    </ul>
+  </footer>
+
+</html>

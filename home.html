@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram フォローチェッカー</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="pageTitle">Instagram フォローチェッカー</h1>
+
+    <div id="fileInputs">
+        <input type="file" id="followingFileInput" accept=".json" onchange="handleFileSelect('following')">
+        <label for="followingFileInput">following.json ファイルを選択</label><br>
+        <input type="file" id="followersFileInput" accept=".json" onchange="handleFileSelect('followers')">
+        <label for="followersFileInput">followers_1.json ファイルを選択</label><br>
+    </div>
+
+    <button id="compareButton" onclick="compareFiles()">実行</button>
+    
+    <div id="results">
+
+        <h2 id="ErrorMessage"></h2>
+
+        <div id="followOnly">
+            <h2 id="followOnlyHeader"></h2>
+            <ul id="followOnlyList"></ul>
+        </div>        
+
+        <div id="followerOnly">
+            <h2 id="followerOnlyHeader"></h2>
+            <ul id="followerOnlyList"></ul>
+        </div>
+
+        <div id="followAndFollower">
+            <h2 id="followAndFollowerHeader"></h2>
+            <ul id="followAndFollowerList"></ul>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+<footer class="footer">
+    <p class="copyright">Copyright © 2024 SAYU. All Rights Reserved.</p>
+    <ul class="md-flex">
+      <li><a href="./manual.html">使い方</a></li>
+      <li><a href="https://discord.gg/QMe4BZEc">コンタクト</a></li>
+    </ul>
+  </footer>
+
+</html>
