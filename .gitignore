@@ -1,0 +1,4 @@
+followers_*.json
+following.json
+*.zip
+.playwright-mcp/

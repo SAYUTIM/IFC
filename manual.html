@@ -3,50 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram フォローチェッカー</title>
+    <title>使い方 - Instagram Follow Checker</title>
+    <link rel="icon" href="data:,">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1 id="pageTitle">Instagram フォローチェッカー 使い方</h1>
+    <header class="site-header">
+        <a class="brand" href="./home.html" aria-label="Instagram Follow Checker ホーム">IFC</a>
+        <nav class="header-nav" aria-label="メインナビゲーション">
+            <a href="./home.html">ホーム</a>
+            <a href="https://discord.gg/QMe4BZEc" target="_blank" rel="noreferrer">コンタクト</a>
+        </nav>
+    </header>
 
-    <div id="usage">
-        <h3>・データをダウンロードする</h3>
-        <p>1.<a href="https://www.instagram.com/">Instagram</a>を開く</p>
-        <p>2."その他"から"アクティビティ"を選択</p>
-        <img class="usage-image" src="./UsageImg/img1.png" alt="使い方の画像">
-        <p>3."個人データをダウンロード"から"次へ"をクリック</p>
-        <img class="usage-image" src="./UsageImg/img2.png" alt="使い方の画像">
-        <p>4.新しいタブが開かれるのでそこで"情報をダウンロードまたは転送"をクリック</p>
-        <img class="usage-image" src="./UsageImg/img3.png" alt="使い方の画像">
-        <p>5.どの程度の情報が必要か問われるので"情報の一部"を選択</p>
-        <img class="usage-image" src="./UsageImg/img4.png" alt="使い方の画像">
-        <p>6."つながり"から"フォロワーとフォロー"のみを選択して次へ</p>
-        <img class="usage-image" src="./UsageImg/img5.png" alt="使い方の画像">
-        <p>7.情報をどのように利用するか問われるので好きな方を選択して次へ（デバイスにダウンロードがおすすめ）</p>
-        <p>8."期間"を全期間にして、"通知"は自身のメールアドレスを選択、"フォーマット"はJSONを選びファイルを作成</p>
-        <img class="usage-image" src="./UsageImg/img6.png" alt="使い方の画像">
-        <p>9.処理中になるので完了するまで待つ（1~10分程度）</p>
-        <p>10.処理が終了するとメールが届くので" download your information"をクリック</p>
-        <img class="usage-image" src="./UsageImg/img7.png" alt="使い方の画像">
-        <p>11.新しいタブが開かれるのでそこで"現在のアクティビティ"から"利用可能なダウンロード"の"ダウンロード"をクリック</p>
-        <h3>・データを読み込む</h3>
-        <p>1.ダウンロードが完了したら解凍する</p>
-        <p>2.<a href="./home.html">ホームページ</a>を開く</p>
-        <p>3.following.jsonファイルを選択をクリックして、先ほど解凍したファイルを開き[instagram-yourID-YYYY-MM-DD/connections/followers_and_following]中にあるfollowing.jsonを選択する</p>
-        <p>4.followers_1.jsonファイルを選択をクリックして、同様にfollowers_1.jsonを選択する</p>
-        <p>5.実行をクリック</p>
-        <p>Done.</p>
-    </div>
+    <main>
+        <section id="usage">
+            <div class="manual-hero">
+                <div>
+                    <p class="eyebrow">Manual</p>
+                    <h1 id="pageTitle">ZIPを作成して解析する</h1>
+                    <p class="usage-lead">Instagramのエクスポート機能からJSON形式のZIPを作成し、そのZIPをこのサイトにアップロードします。解析はブラウザ内だけで完結します。</p>
+                </div>
+                <a class="manual-cta" href="./home.html">ZIPをアップロード</a>
+            </div>
 
-    <script src="script.js" defer></script>
+            <div class="manual-grid">
+                <aside class="manual-summary" aria-label="必要な設定">
+                    <h2>必要な設定</h2>
+                    <dl>
+                        <div>
+                            <dt>エクスポート先</dt>
+                            <dd>デバイスにエクスポート</dd>
+                        </div>
+                        <div>
+                            <dt>フォーマット</dt>
+                            <dd>JSON</dd>
+                        </div>
+                        <div>
+                            <dt>待ち時間</dt>
+                            <dd>5〜10分程度</dd>
+                        </div>
+                        <div>
+                            <dt>アップロード</dt>
+                            <dd>ダウンロードしたZIPをそのまま選択</dd>
+                        </div>
+                    </dl>
+                </aside>
+
+                <div class="manual-steps">
+                    <ol class="timeline">
+                        <li>
+                            <span class="step-index">01</span>
+                            <div>
+                                <h3>Instagramホームから設定を開く</h3>
+                                <p>Instagramホーム左下の <span class="tap-target">その他</span> を押し、メニュー内の <span class="tap-target">設定</span> を選びます。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-index">02</span>
+                            <div>
+                                <h3>アカウントセンターへ進む</h3>
+                                <p>「あなたのアカウント」内の <span class="tap-target">アカウントセンター</span> を開きます。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-index">03</span>
+                            <div>
+                                <h3>情報のエクスポート画面へ進む</h3>
+                                <p>「アカウント設定」から <span class="tap-target">あなたの情報とアクセス許可</span> を選び、続けて <span class="tap-target">あなたの情報をエクスポート</span> を開きます。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-index">04</span>
+                            <div>
+                                <h3>エクスポートを作成する</h3>
+                                <p><span class="tap-target">エクスポートを作成</span> を押し、エクスポート先で <span class="tap-target">デバイスにエクスポート</span> を選択します。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-index">05</span>
+                            <div>
+                                <h3>期間を全期間に変更する</h3>
+                                <p>設定項目の <span class="tap-target">期間</span> を開き、<span class="tap-target">全期間</span> を選びます。ここが短い期間のままだと、フォロー情報が一部しか含まれません。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-index">06</span>
+                            <div>
+                                <h3>JSON形式で開始する</h3>
+                                <p>設定画面でフォーマットを <span class="tap-target">JSON</span> に変更し、<span class="tap-target">エクスポートを開始</span> を押します。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-index">07</span>
+                            <div>
+                                <h3>本人確認を完了する</h3>
+                                <p>パスワードを入力して <span class="tap-target">次へ</span> を押します。完了後、ファイル作成まで5〜10分ほど待ちます。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-index">08</span>
+                            <div>
+                                <h3>ZIPをダウンロードする</h3>
+                                <p>「利用可能なダウンロード」に表示されたファイルの <span class="tap-target">ダウンロード</span> を押してZIPを保存します。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-index">09</span>
+                            <div>
+                                <h3>このサイトで解析する</h3>
+                                <p>保存したZIPをホーム画面へアップロードします。ZIPを解凍したり、JSONを探したりする必要はありません。</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="manual-notes">
+                <section>
+                    <h2>情報漏洩について</h2>
+                    <p>ZIPの展開と比較処理はすべてクライアント側、つまりあなたのブラウザ内で行われます。ZIPやJSONの中身はサーバーへアップロードされません。</p>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Copyright © 2024 SAYU. All Rights Reserved.</p>
+        <ul class="footer-links">
+            <li><a href="./home.html">ホーム</a></li>
+            <li><a href="https://discord.gg/QMe4BZEc" target="_blank" rel="noreferrer">コンタクト</a></li>
+        </ul>
+    </footer>
 </body>
-
-<footer class="footer">
-    <p class="copyright">Copyright © 2024 SAYU. All Rights Reserved.</p>
-    <ul class="md-flex">
-      <li><a href="./home.html">ホーム</a></li>
-      <li><a href="https://discord.gg/QMe4BZEc">コンタクト</a></li>
-    </ul>
-  </footer>
-
 </html>
